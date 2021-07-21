@@ -406,6 +406,7 @@ body {
   color: #999999;
   text-align: center;
   text-decoration: none;
+  border-radius: 5px;
 }
 .pager .previous a:hover,
 .pager .next a:hover {
@@ -494,6 +495,7 @@ body {
     color: #999999;
     text-align: center;
     text-decoration: none;
+    border-radius: 5px;
   }
   .pager .previous a:hover,
   .pager .next a:hover {
@@ -749,7 +751,7 @@ body {
   width: 240px;
 }
 .index-container .index-middle {
-  max-width: 784px;
+  max-width: 800px;
   flex: 1;
 }
 @media screen and (max-width: 1180px) {
