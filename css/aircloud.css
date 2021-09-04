@@ -1236,4 +1236,29 @@ pre .javascript .function {
 .gitment-comment p {
   text-indent: 0;
 }
+
+.friends_list_container{
+  width: 90%;
+}
+.friends_list_container .friends_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.friends{
+  width: 200px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  box-shadow: 5px 4px 3px rgba(54, 52, 52, 0.2);
+}
+.friends img{
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=aircloud.css.map */
