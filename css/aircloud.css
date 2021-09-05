@@ -1260,5 +1260,25 @@ pre .javascript .function {
   height: 70px;
   border-radius: 10px;
 }
+.friends .info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+}
+.friends .name{
+  margin-left: -10px;
+  margin-top: 5px;
+}
+.friends .introduce{
+  font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 300;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
 /*# sourceMappingURL=aircloud.css.map */
