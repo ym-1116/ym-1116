@@ -1237,48 +1237,46 @@ pre .javascript .function {
   text-indent: 0;
 }
 
-.friends_list_container{
-  width: 90%;
-}
-.friends_list_container .friends_list{
+/*.friends_list_container{
+  width: 80%;
+}*/
+.friends_list{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 50px;
+  justify-content: space-around;
+  margin-top: 100px;
+
 }
 .friends{
-  width: 200px;
-  margin-bottom: 50px;
+  width: 300px;
+  margin: 15px 7px;
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-  box-shadow: 5px 4px 3px rgba(54, 52, 52, 0.2);
+  padding: 10px 10px 0;
+  overflow: hidden;
 }
-.friends img{
+.friends .avatar img{
   width: 70px;
   height: 70px;
-  border-radius: 10px;
+  border-radius: 45px;
 }
-.friends .info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
 
-}
 .friends .name{
-  margin-left: -10px;
-  margin-top: 5px;
+  display: block;
+  padding: 16px 10px 0 0;
+  height: 40px;
+  font-weight: 700;
+  font-size: 1em;
+  white-space: nowrap;
 }
 .friends .introduce{
-  font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 0;
-  font-weight: 300;
-  margin-left: 5px;
-  margin-right: 5px;
+  font-display: block;
+  padding: 16px 10px 16px 0;
+  height: 30px;
+  font-size: .9em;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=aircloud.css.map */
