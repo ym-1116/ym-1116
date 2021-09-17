@@ -2,15 +2,17 @@
 * {
   font-family: "italic", Helvetica, Arial, "Heiti SC", "Microsoft YaHei";
 }
-body,
-html {
+body,html
+{
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 body {
   margin-left: calc(100vw - 100%) !important;
   -webkit-text-size-adjust: none;
 }
+
 .red {
   color: red;
 }
@@ -374,6 +376,8 @@ body {
 }
 .post-preview-container {
   min-height: 420px;
+  padding-left: 60px;
+  padding-top: 90px;
 }
 .pager {
   width: 100%;
@@ -399,14 +403,13 @@ body {
   cursor: pointer;
   transition: color 0.4s, background-color 0.4s;
   border: 1px solid #999999;
-  line-height: 20px;
-  width: 40px;
-  height: 20px;
+  line-height: 40px;
+  width: 150px;
+  height: 40px;
   font-size: 18px;
   color: #999999;
   text-align: center;
   text-decoration: none;
-  border-radius: 5px;
 }
 .pager .previous a:hover,
 .pager .next a:hover {
@@ -488,14 +491,13 @@ body {
     cursor: pointer;
     transition: color 0.4s, background-color 0.4s;
     border: 1px solid #999999;
-    line-height: 20px;
-    width: 40px;
-    height: 20px;
+    line-height: 30px;
+    width: 120px;
+    height: 30px;
     font-size: 14px;
     color: #999999;
     text-align: center;
     text-decoration: none;
-    border-radius: 5px;
   }
   .pager .previous a:hover,
   .pager .next a:hover {
@@ -682,31 +684,43 @@ body {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h2 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h3 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h4 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h5 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content h6 {
   color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
+  line-height: 120%;
+  word-break: break-all;
 }
 .post-content figcaption {
   text-align: center;
@@ -751,7 +765,7 @@ body {
   width: 240px;
 }
 .index-container .index-middle {
-  max-width: 800px;
+  max-width: 784px;
   flex: 1;
 }
 @media screen and (max-width: 1180px) {
@@ -1085,7 +1099,7 @@ pre .javascript .function {
   display: flex;
   flex-direction: column;
   color: #979797;
-  margin-bottom: 10px;
+  margin-top:100px;
 }
 .footer p {
   font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
@@ -1236,47 +1250,4 @@ pre .javascript .function {
 .gitment-comment p {
   text-indent: 0;
 }
-
-/*.friends_list_container{
-  width: 80%;
-}*/
-.friends_list{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 100px;
-
-}
-.friends{
-  width: 300px;
-  margin: 15px 7px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 10px;
-  padding: 10px 10px 0;
-  overflow: hidden;
-}
-.friends .avatar img{
-  width: 70px;
-  height: 70px;
-  border-radius: 45px;
-}
-
-.friends .name{
-  display: block;
-  padding: 16px 10px 0 0;
-  height: 40px;
-  font-weight: 700;
-  font-size: 1em;
-  white-space: nowrap;
-}
-.friends .introduce{
-  font-display: block;
-  padding: 16px 10px 16px 0;
-  height: 30px;
-  font-size: .9em;
-  white-space: nowrap;
-}
-
 /*# sourceMappingURL=aircloud.css.map */
