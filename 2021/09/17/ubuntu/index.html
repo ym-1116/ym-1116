@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="记录一些东西总是好的">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Ubuntu 20.04 LTS 优化|美化 &amp; 问题解决 - 佚名1116
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div class="site-nav-toggle" id="site-nav-toggle">
+        <button>
+            <span class="btn-bar"></span>
+            <span class="btn-bar"></span>
+            <span class="btn-bar"></span>
+        </button>
+    </div>
+    
+    <div class="index-about">
+        <i> Wubba lubba dub dub </i>
+    </div>
+    
+    <div class="index-container" style="min-height: 620px">
+        
+        <div class="index-left">
+            
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/rick.png" />
+        </div>
+        <div class="name">
+            <i>佚名1116</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-text">一、实用工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-text">火狐浏览器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-text">搜狗输入法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Visual-Studio-Code"><span class="toc-text">Visual Studio Code</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#QQ-for-linux"><span class="toc-text">QQ for linux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90"><span class="toc-text">网易云音乐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE"><span class="toc-text">深度截图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Deepin-wine"><span class="toc-text">Deepin wine</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96"><span class="toc-text">二、主题美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A1%8C%E9%9D%A2%E4%B8%BB%E9%A2%98"><span class="toc-text">桌面主题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E8%8E%B7%E5%8F%96"><span class="toc-text">主题获取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E5%90%AF%E7%94%A8"><span class="toc-text">主题安装启用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A1%8C%E9%9D%A2%E5%9B%BE%E6%A0%87"><span class="toc-text">桌面图标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A1%8C%E9%9D%A2%E6%8F%92%E4%BB%B6"><span class="toc-text">桌面插件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%A0%8F%E9%80%8F%E6%98%8E%E6%8F%92%E4%BB%B6"><span class="toc-text">状态栏透明插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%A0%8F%E6%98%BE%E7%A4%BA%E5%AE%9E%E6%97%B6%E7%BD%91%E9%80%9F%E6%8F%92%E4%BB%B6"><span class="toc-text">状态栏显示实时网速插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E6%B4%BB%E5%8A%A8%E7%AA%97%E5%8F%A3%E5%AE%8C%E6%95%B4%E6%A0%87%E9%A2%98"><span class="toc-text">显示当前活动窗口完整标题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Applications-menu"><span class="toc-text">Applications menu</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E6%A0%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6"><span class="toc-text">任务栏自定义插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%A7%E5%AE%B6%E6%9C%89%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%9C%A8%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%88%86%E4%BA%AB"><span class="toc-text">大家有好用的插件也可以在评论区分享</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">三、遇到的一些问题和解决办法</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+            <div class="index-about-mobile">
+                <i> Wubba lubba dub dub </i>
+            </div>
+        </div>
+        
+        <div class="index-middle" >
+            <!-- Main Content -->
+            
+
+
+<div class="post-container">
+    <div class="post-title">
+        Ubuntu 20.04 LTS 优化|美化 &amp; 问题解决
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-09-17 21:49:16</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#优化" title="优化">优化</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>从我开始写这篇文章起，已经将ubuntu作为主力系统使用了大概两个月时间了。从一开始的小白到现在的轻车熟路，遇到了各种各样的奇葩问题，这些问题在大佬眼里可能不值一提，但对小白来说却要花费不少精力逛遍各种国内外论坛来寻求解决办法，于是乎我来把一些折腾的过程记录下来或许对像我一样刚刚接触Linux的同学有所帮助。</p>
+<h3 id="一、实用工具"><a href="#一、实用工具" class="headerlink" title="一、实用工具"></a>一、实用工具</h3><p>排名不分先后，想到啥写啥</p>
+<h4 id="火狐浏览器"><a href="#火狐浏览器" class="headerlink" title="火狐浏览器"></a>火狐浏览器</h4><p>这个应该是系统安装完时候就有的，虽然在Windows下我基本不用，但是在ubuntu下，体验感觉比chromium要好。</p>
+<h4 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h4><p>在我用过的中文输入法中体验是最棒的，词库太强大了。</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/?r=pinyin">点我直达</a></p>
+<p>安装教程：<a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/help.php">点我直达</a></p>
+<h4 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h4><p>代码编辑利器，体验一级棒</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">点我直达</a></p>
+<h4 id="QQ-for-linux"><a href="#QQ-for-linux" class="headerlink" title="QQ for linux"></a>QQ for linux</h4><p>处于勉强能用的状态，界面还停留在上个世纪。</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://im.qq.com/linuxqq/index.html">点我直达</a></p>
+<h4 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h4><p>听歌必备,界面跟Windows下一样，支持最小化到系统状态栏，比QQ不知道强到哪里了…</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb">点我直达</a></p>
+<h4 id="深度截图"><a href="#深度截图" class="headerlink" title="深度截图"></a>深度截图</h4><p>deepin操作系统自带的截图工具，感觉是Linux下最好用的截图软件，体验和我在Windows下常用的</p>
+<p>Snipaste很接近。</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://www.deepin.org/zh/original/deepin-screenshot/">点我直达</a></p>
+<h4 id="Deepin-wine"><a href="#Deepin-wine" class="headerlink" title="Deepin wine"></a>Deepin wine</h4><p>Deepin 团队开发的一个可以模拟Windows行为的模拟器，可以在Linux环境下运行一些Windows软件，比如QQ、Tim、微信、QQ音乐等等。喜欢折腾的同学可以试试。</p>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/wszqkzqk/deepin-wine-ubuntu">项目地址</a></p>
+<hr>
+<h3 id="二、主题美化"><a href="#二、主题美化" class="headerlink" title="二、主题美化"></a>二、主题美化</h3><p>先放一波效果图：</p>
+<img src="https://gitee.com/ym1116/pic-go/raw/master/DeepinScreenshot_select-area_20210918204646.png" style="width: 80%;" />
+
+
+
+<h4 id="桌面主题"><a href="#桌面主题" class="headerlink" title="桌面主题"></a>桌面主题</h4><h5 id="主题获取"><a href="#主题获取" class="headerlink" title="主题获取"></a>主题获取</h5><p>Gnome桌面提供了一个官方主题网站：<a target="_blank" rel="noopener" href="https://www.gnome-look.org/%EF%BC%8C">https://www.gnome-look.org/，</a> 上面有各种各样的主题可供选择，这里要注意选择GTK3下的主题，其他板块的主题不适用于ubuntu。</p>
+<p>网站提供一个打分和排名系统，可以更好的帮助你选择比较完善的主题，排名靠前的主题不会太差的。</p>
+<h5 id="主题安装启用"><a href="#主题安装启用" class="headerlink" title="主题安装启用"></a>主题安装启用</h5><ol>
+<li><p>将选择好的主题下载并解压到/usr/share/themes下</p>
+</li>
+<li><p>安装GNOME Tweaks工具，tweaks可以帮助你高度自定义gnome桌面</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install gnome-tweaks</span><br></pre></td></tr></table></figure></li>
+<li><p>打开Tweak,在外观选项下找到’应用程序’选项，选择刚刚下载的主题即可。</p>
+</li>
+</ol>
+<h4 id="桌面图标"><a href="#桌面图标" class="headerlink" title="桌面图标"></a>桌面图标</h4><p>还是刚刚下载主题那个gnome官方网站，在侧边选项栏找到Full Icon Themes,过程和安装主题一样，只不过要把下载的icon文件解压到/usr/share/icons/ 下。然后在tweak下找到并启用。</p>
+<h4 id="桌面插件"><a href="#桌面插件" class="headerlink" title="桌面插件"></a>桌面插件</h4><p>插件可以方便的帮助我们实现某一功能，在安装之前，我们下要安装一个浏览器拓展</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install chrome-gnome-shell</span><br></pre></td></tr></table></figure>
+
+<p>这个拓展可以方便的帮助我们安装插件</p>
+<p>下面介绍几个我认为比较好用的插件，已第一个为例介绍安装方法，后面的只提供安装地址。</p>
+<h5 id="状态栏透明插件"><a href="#状态栏透明插件" class="headerlink" title="状态栏透明插件"></a>状态栏透明插件</h5><p>首先打开<a target="_blank" rel="noopener" href="https://extensions.gnome.org/%EF%BC%8C">https://extensions.gnome.org/，</a> 搜索transparent-top-bar，搜索结果可能会有很多重名插件，这里我们选择<a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1708/transparent-top-bar/%EF%BC%8C">https://extensions.gnome.org/extension/1708/transparent-top-bar/，</a> 打开后你会发现插件名字右上角有一个开关，如果你已经提前安装好了上文提到的浏览器拓展，那么直接打开开关就可以将拓展启用。之后还可以在tweaks工具的拓展栏下进行管理。</p>
+<h5 id="状态栏显示实时网速插件"><a href="#状态栏显示实时网速插件" class="headerlink" title="状态栏显示实时网速插件"></a>状态栏显示实时网速插件</h5><p>地址：<a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/104/netspeed/">https://extensions.gnome.org/extension/104/netspeed/</a></p>
+<h5 id="显示当前活动窗口完整标题"><a href="#显示当前活动窗口完整标题" class="headerlink" title="显示当前活动窗口完整标题"></a>显示当前活动窗口完整标题</h5><p>在浏览网页时可以在状态栏显示网页完整标题</p>
+<p>地址：<a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/59/status-title-bar/">https://extensions.gnome.org/extension/59/status-title-bar/</a></p>
+<h5 id="Applications-menu"><a href="#Applications-menu" class="headerlink" title="Applications menu"></a>Applications menu</h5><p>可以在状态栏左上角显示一个基于分类的应用菜单</p>
+<img src="https://gitee.com/ym1116/pic-go/raw/master/DeepinScreenshot_select-area_20210918213225.png" style="width:50%;" />
+
+
+
+<h5 id="任务栏自定义插件"><a href="#任务栏自定义插件" class="headerlink" title="任务栏自定义插件"></a>任务栏自定义插件</h5><p>这里要推荐的是dash to dock 插件，使用方法我就不赘述了，网上都有，贴个链接。</p>
+<p>地址：<a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/307/dash-to-dock/">https://extensions.gnome.org/extension/307/dash-to-dock/</a></p>
+<p>使用教程：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/keatonlao/p/12705335.html">https://www.cnblogs.com/keatonlao/p/12705335.html</a></p>
+<h5 id="大家有好用的插件也可以在评论区分享"><a href="#大家有好用的插件也可以在评论区分享" class="headerlink" title="大家有好用的插件也可以在评论区分享"></a>大家有好用的插件也可以在评论区分享</h5><h3 id="三、遇到的一些问题和解决办法"><a href="#三、遇到的一些问题和解决办法" class="headerlink" title="三、遇到的一些问题和解决办法"></a>三、遇到的一些问题和解决办法</h3><p>很多问题不知从何写起（以后遇到会记录在这里），当然如果看到我这篇文章有什么问题可以在评论区留言。</p>
+<hr>
+<p>首次编辑：2021-9-17</p>
+<p>更新日期：2021-9-18</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+    
+    
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+    </p>
+    
+    <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io" style = "text-decoration:none" >Hexo</a> | Hosting by <a style = "text-decoration:none" target="_blank" rel="noopener" href="https://github.com"><i class="iconfont icon-github"></i>Github</a></p>
+</footer>
+
+
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json";
+    window.hexo_root = "/";
+    window.isPost = "true";
+    // var containerHeight = $(window).height();
+    // $('.post-preview-container').css({"min-height":containerHeight/1.5+'px'});
+    // $(window).on('resize', function () {
+    //     containerHeight = $(window).height();
+    //     $('html').css({"height":containerHeight+'px'});
+    // });
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//cdn.jsdelivr.net/npm/busuanzi@2.3.0"></script>
+
+
+
+
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>    
+    <script>
+        new Valine({
+            el: '#comment-container',
+            appId: 'xkm3A7x4pt9e4sURvWwgMB1g-gzGzoHsz',
+            appKey: 'yjthBEDjchNGKd7BHviUHHzt',
+            placeholder: '填qq号可自动获取qq头像',
+            avatar: 'robohash',
+            recordIP: true,
+            enableQQ: true,
+            emojiCDN: '//i0.hdslb.com/bfs/',
+            emojiMaps: {
+                "打扰了": "live/a9e2acaf72b663c6ad9c39cda4ae01470e13d845.png",
+                "打卡": "emote/a9cf77c78e1b9b40aa3ed4862402fba008ee2f51.png",
+                "好活": "emote/7ec857e53ebaf37c59e96b5e56bcb0f05cd0b2d7.png",
+                "可以": "emote/e08543c71202b36c590094417fcfbb80c3506cd8.png",
+                "好家伙": "emote/63ec80dea3066bd9f449ba999ba531fa61f7b4eb.png",
+                "知识增加": "emote/142409b595982b8210b2958f3d340f3b47942645.png",
+                "藏狐": "emote/ba0937ef6f3ccca85e2e0047e6263f3b4da37201.png",
+                "狗头": "emote/3087d273a78ccaff4bb1e9972e2ba2a7583c9f11.png",
+                "爱心": "emote/ed04066ea7124106d17ffcaf75600700e5442f5c.png",
+                "doge": "emote/6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+                "吐血": "emote/09dd16a7aa59b77baa1155d47484409624470c77.png",
+                "晕": "emote/5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+                "呆": "emote/fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+                "坏笑": "emote/1f0b87f731a671079842116e0991c91c2c88645a.png",
+                "大佬": "emote/093c1e2c490161aca397afc45573c877cdead616.png",
+                "大哭": "emote/23269aeb35f99daee28dda129676f6e9ea87934f.png",
+                "委屈": "emote/d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+                "尴尬": "emote/7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+                "思考": "emote/90cf159733e558137ed20aa04d09964436f618a1.png",
+            }
+        })
+    </script> 
+
+
+
+
+</html>
