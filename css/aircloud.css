@@ -2,17 +2,15 @@
 * {
   font-family: "italic", Helvetica, Arial, "Heiti SC", "Microsoft YaHei";
 }
-body,html
-{
+body,
+html {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 body {
   margin-left: calc(100vw - 100%) !important;
   -webkit-text-size-adjust: none;
 }
-
 .red {
   color: red;
 }
@@ -376,8 +374,6 @@ body {
 }
 .post-preview-container {
   min-height: 420px;
-  padding-left: 60px;
-  padding-top: 90px;
 }
 .pager {
   width: 100%;
@@ -585,7 +581,6 @@ body {
   height: max-content;
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
 }
 .post-container .post-title {
   width: 100%;
@@ -619,6 +614,7 @@ body {
   text-indent: 2em;
   color: #333333;
   font-weight: 300;
+  margin-left: 20px;
 }
 .post-content > table,
 .post-content > table tr th,
@@ -1100,7 +1096,7 @@ pre .javascript .function {
   display: flex;
   flex-direction: column;
   color: #979797;
-  margin-top:100px;
+  margin-bottom: 10px;
 }
 .footer p {
   font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
