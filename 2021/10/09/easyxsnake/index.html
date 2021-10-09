@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="记录一些东西总是好的">
+    <meta name="keyword"  content="">
+    <meta name="google-site-verification" content="kybOoZ5UM557T0zxlWyj9o-RjBu1yzTPVq5d0OQ-mL4" />
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        使用easyX图形库写的一个贪吃蛇小游戏 - 佚名1116
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/cea4b4e968.js" crossorigin="anonymous"></script>
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div class="site-nav-toggle" id="site-nav-toggle">
+        <button>
+            <span class="btn-bar"></span>
+            <span class="btn-bar"></span>
+            <span class="btn-bar"></span>
+        </button>
+    </div>
+    
+    <div class="index-about">
+        <i> Wubba lubba dub dub </i>
+    </div>
+    
+    <div class="index-container" style="min-height: 620px">
+        
+        <div class="index-left">
+            
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/rick.png" />
+        </div>
+        <div class="name">
+            <i>佚名1116</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            <!-- <li >
+                <a href="/messageboard/">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>留言</span>
+                </a>
+            </li> -->
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E4%BD%93%E9%80%BB%E8%BE%91"><span class="toc-text">总体逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="toc-text">监听键盘输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E8%8A%82%E7%82%B9%E5%9D%90%E6%A0%87"><span class="toc-text">更新节点坐标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%90%83%E5%88%B0%E9%A3%9F%E7%89%A9"><span class="toc-text">判断是否吃到食物</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%98%E5%88%B6"><span class="toc-text">绘制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%AD%BB%E4%BA%A1"><span class="toc-text">判断是否死亡</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+            <div class="index-about-mobile">
+                <i> Wubba lubba dub dub </i>
+            </div>
+        </div>
+        
+        <div class="index-middle" >
+            <!-- Main Content -->
+            
+
+
+<div class="post-container">
+    <div class="post-title">
+        使用easyX图形库写的一个贪吃蛇小游戏
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-10-09 21:04:05</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#easyX" title="easyX">easyX</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#贪吃蛇" title="贪吃蛇">贪吃蛇</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>之前在学c语言的时候尝试写过但是没写完，正好趁着图形学课程实验摸鱼还一波愿。</p>
+<h2 id="总体逻辑"><a href="#总体逻辑" class="headerlink" title="总体逻辑"></a>总体逻辑</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">initGame</span>(); <span class="comment">// 初始化</span></span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">		<span class="built_in">getKbhit</span>(); <span class="comment">// 监听键盘动作</span></span><br><span class="line">		<span class="built_in">moveSnake</span>(); <span class="comment">// 更新蛇身节点坐标</span></span><br><span class="line">		<span class="built_in">eatFood</span>(); <span class="comment">// 判断是否吃到食物</span></span><br><span class="line">		<span class="built_in">drawSnake</span>(); <span class="comment">// 绘制蛇身</span></span><br><span class="line">        <span class="built_in">isDead</span>(); <span class="comment">// 判断是否死亡</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> WIDTH 600</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> HEIGHT 400</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STRLEGTH 1 <span class="comment">// 初始长度</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLENGTH 1000 <span class="comment">// 最大长度</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIZE 8 <span class="comment">// 节点半径</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> score = <span class="number">0</span>; <span class="comment">// 初始分数</span></span><br><span class="line"><span class="keyword">int</span> speed = <span class="number">10</span>; <span class="comment">// 移动速度</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DIR</span> &#123;</span> <span class="comment">// 坐标结构体</span></span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	<span class="keyword">int</span> y;</span><br><span class="line">&#125;Dir;</span><br><span class="line"></span><br><span class="line">Dir dir; <span class="comment">// 方向向量</span></span><br><span class="line"></span><br><span class="line">Dir snake[MAXLENGTH]; <span class="comment">// 用一个坐标数组来表示蛇身</span></span><br><span class="line"><span class="keyword">int</span> len = STRLEGTH;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">FOOD</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	<span class="keyword">int</span> y;</span><br><span class="line">&#125;food; </span><br></pre></td></tr></table></figure>
+
+<h3 id="监听键盘输入"><a href="#监听键盘输入" class="headerlink" title="监听键盘输入"></a>监听键盘输入</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getKbhit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (_kbhit()) &#123;</span><br><span class="line">        _getch(); <span class="comment">// 键盘上的方向键由两个ASCII码构成，先调用一次getch过滤掉第一个ASCII码</span></span><br><span class="line">        <span class="built_in"><span class="keyword">switch</span></span> (_getch())</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">75</span>:</span><br><span class="line">            <span class="keyword">if</span> (dir.x != <span class="number">1</span> || dir.y != <span class="number">0</span>) &#123;</span><br><span class="line">                dir.x = <span class="number">-1</span>;</span><br><span class="line">                dir.y = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">77</span>:</span><br><span class="line">            <span class="keyword">if</span> (dir.x != <span class="number">-1</span> || dir.y != <span class="number">0</span>) &#123;</span><br><span class="line">                dir.x = <span class="number">1</span>;</span><br><span class="line">                dir.y = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">72</span>:</span><br><span class="line">            <span class="keyword">if</span> (dir.x != <span class="number">0</span> || dir.y != <span class="number">1</span>) &#123;</span><br><span class="line">                dir.x = <span class="number">0</span>;</span><br><span class="line">                dir.y = <span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">80</span>:</span><br><span class="line">            <span class="keyword">if</span> (dir.x != <span class="number">0</span> || dir.y != <span class="number">-1</span>) &#123;</span><br><span class="line">                dir.x = <span class="number">0</span>;</span><br><span class="line">                dir.y = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新节点坐标"><a href="#更新节点坐标" class="headerlink" title="更新节点坐标"></a>更新节点坐标</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">moveSnake</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">setcolor</span>(BLACK);     </span><br><span class="line">    <span class="built_in">rectangle</span>(snake[len - <span class="number">1</span>].x - SIZE, snake[len - <span class="number">1</span>].y - SIZE, snake[len - <span class="number">1</span>].x + SIZE, snake[len - <span class="number">1</span>].y + SIZE); <span class="comment">// 将最后一个正方形变成黑色实现“擦除”</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) <span class="comment">// 后一个节点的坐标更新为前一个节点的坐标 </span></span><br><span class="line">    &#123;</span><br><span class="line">        snake[i].x = snake[i - <span class="number">1</span>].x; </span><br><span class="line">        snake[i].y = snake[i - <span class="number">1</span>].y;</span><br><span class="line">    &#125;</span><br><span class="line">    snake[<span class="number">0</span>].x += dir.x * <span class="number">2</span> * SIZE; <span class="comment">// 更新头结点坐标</span></span><br><span class="line">    snake[<span class="number">0</span>].y += dir.y * <span class="number">2</span> * SIZE;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (snake[<span class="number">0</span>].x &gt;= WIDTH)  <span class="comment">// 穿墙</span></span><br><span class="line">        snake[<span class="number">0</span>].x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (snake[<span class="number">0</span>].x &lt;= <span class="number">0</span>)</span><br><span class="line">        snake[<span class="number">0</span>].x = WIDTH;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (snake[<span class="number">0</span>].y &gt;= HEIGHT)</span><br><span class="line">        snake[<span class="number">0</span>].y = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (snake[<span class="number">0</span>].y &lt;= <span class="number">0</span>)</span><br><span class="line">        snake[<span class="number">0</span>].y = HEIGHT;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判断是否吃到食物"><a href="#判断是否吃到食物" class="headerlink" title="判断是否吃到食物"></a>判断是否吃到食物</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">eatFood</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">fabs</span>(snake[<span class="number">0</span>].x - food.x) &lt;= <span class="number">2</span> * SIZE &amp;&amp; <span class="built_in">fabs</span>(snake[<span class="number">0</span>].y - food.y) &lt;= <span class="number">2</span> * SIZE)    <span class="comment">//判断是否吃到食物</span></span><br><span class="line">    &#123;</span><br><span class="line">        score++; <span class="comment">// 分数+1</span></span><br><span class="line">        <span class="built_in">setcolor</span>(BLACK);  </span><br><span class="line">        <span class="built_in">circle</span>(food.x, food.y, SIZE);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">crtFood</span>();   <span class="comment">// 重新生成食物</span></span><br><span class="line"></span><br><span class="line">        len ++; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) <span class="comment">// 所有结点后移</span></span><br><span class="line">        &#123;</span><br><span class="line">            snake[i].x = snake[i - <span class="number">1</span>].x;</span><br><span class="line">            snake[i].y = snake[i - <span class="number">1</span>].y;</span><br><span class="line">        &#125;</span><br><span class="line">        snake[<span class="number">0</span>].x += dir.x * <span class="number">2</span> * SIZE; <span class="comment">// 更新头结点坐标</span></span><br><span class="line">        snake[<span class="number">0</span>].y += dir.y * <span class="number">2</span> * SIZE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="绘制"><a href="#绘制" class="headerlink" title="绘制"></a>绘制</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">drawSnake</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">setcolor</span>(BLUE);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">rectangle</span>(snake[i].x - SIZE, snake[i].y - SIZE, snake[i].x + SIZE, snake[i].y + SIZE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">setcolor</span>(RED); </span><br><span class="line">    <span class="built_in">circle</span>(food.x, food.y, SIZE);</span><br><span class="line">    TCHAR s[<span class="number">5</span>];</span><br><span class="line">    _stprintf_s(s, _T(<span class="string">&quot;%d&quot;</span>), score);</span><br><span class="line">    <span class="keyword">wchar_t</span> chr[] = <span class="string">L&quot;SCORE:&quot;</span>;</span><br><span class="line">    <span class="built_in">outtextxy</span>(<span class="number">10</span>, <span class="number">20</span>, chr);</span><br><span class="line">    <span class="built_in">outtextxy</span>(<span class="number">80</span>, <span class="number">20</span>, s);</span><br><span class="line">    <span class="built_in">Sleep</span>(speed); <span class="comment">// 控制移动速度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判断是否死亡"><a href="#判断是否死亡" class="headerlink" title="判断是否死亡"></a>判断是否死亡</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">isDead</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (len == <span class="number">1</span>)  <span class="comment">//只有一节退出</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">fabs</span>(snake[i].x - snake[<span class="number">0</span>].x) &lt;= SIZE &amp;&amp; <span class="built_in">fabs</span>(snake[i].y - snake[<span class="number">0</span>].y) &lt;= SIZE)            <span class="comment">//如果咬到自己</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">wchar_t</span> chr[] = <span class="string">L&quot;ＧＡＭＥ　ＯＶＥＲ！&quot;</span>;</span><br><span class="line">            <span class="built_in">outtextxy</span>(<span class="number">200</span>, <span class="number">200</span>, chr); </span><br><span class="line">            <span class="built_in">Sleep</span>(<span class="number">30000</span>);</span><br><span class="line">            <span class="built_in">closegraph</span>();</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">0</span>);   <span class="comment">//退出</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+    
+    
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+    </p>
+    
+    <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io" style = "text-decoration:none" >Hexo</a> | Hosting by <a style = "text-decoration:none" target="_blank" rel="noopener" href="https://github.com/ym-1116"><i class="iconfont icon-github"></i>Github</a></p>
+</footer>
+
+
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json";
+    window.hexo_root = "/";
+    window.isPost = "true";
+    // var containerHeight = $(window).height();
+    // $('.post-preview-container').css({"min-height":containerHeight/1.5+'px'});
+    // $(window).on('resize', function () {
+    //     containerHeight = $(window).height();
+    //     $('html').css({"height":containerHeight+'px'});
+    // });
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//cdn.jsdelivr.net/npm/busuanzi@2.3.0"></script>
+
+
+
+
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>    
+    <script>
+        new Valine({
+            el: '#comment-container',
+            appId: 'xkm3A7x4pt9e4sURvWwgMB1g-gzGzoHsz',
+            appKey: 'yjthBEDjchNGKd7BHviUHHzt',
+            placeholder: '填qq号可自动获取qq头像',
+            avatar: 'robohash',
+            recordIP: true,
+            enableQQ: true,
+            emojiCDN: '//i0.hdslb.com/bfs/',
+            emojiMaps: {
+                "打扰了": "live/a9e2acaf72b663c6ad9c39cda4ae01470e13d845.png",
+                "打卡": "emote/a9cf77c78e1b9b40aa3ed4862402fba008ee2f51.png",
+                "好活": "emote/7ec857e53ebaf37c59e96b5e56bcb0f05cd0b2d7.png",
+                "可以": "emote/e08543c71202b36c590094417fcfbb80c3506cd8.png",
+                "好家伙": "emote/63ec80dea3066bd9f449ba999ba531fa61f7b4eb.png",
+                "知识增加": "emote/142409b595982b8210b2958f3d340f3b47942645.png",
+                "藏狐": "emote/ba0937ef6f3ccca85e2e0047e6263f3b4da37201.png",
+                "狗头": "emote/3087d273a78ccaff4bb1e9972e2ba2a7583c9f11.png",
+                "爱心": "emote/ed04066ea7124106d17ffcaf75600700e5442f5c.png",
+                "doge": "emote/6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+                "吐血": "emote/09dd16a7aa59b77baa1155d47484409624470c77.png",
+                "晕": "emote/5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+                "呆": "emote/fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+                "坏笑": "emote/1f0b87f731a671079842116e0991c91c2c88645a.png",
+                "大佬": "emote/093c1e2c490161aca397afc45573c877cdead616.png",
+                "大哭": "emote/23269aeb35f99daee28dda129676f6e9ea87934f.png",
+                "委屈": "emote/d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+                "尴尬": "emote/7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+                "思考": "emote/90cf159733e558137ed20aa04d09964436f618a1.png",
+            }
+        })
+    </script> 
+
+
+
+
+</html>
